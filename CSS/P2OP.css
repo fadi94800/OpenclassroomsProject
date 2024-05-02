@@ -31,9 +31,7 @@ body {
 }
 
 /* Style des onglets */
-.tab {
-    display: flex;
-}
+
 .tab a.active-tab {
     padding: 0;
     color: #0065FC;
@@ -43,23 +41,12 @@ body {
 }
 
 .tab a {
-    float: right;
-    outline: none;
     cursor: pointer;
     padding: 10px 20px;
 }
 
-
-
-/* Style du contenu des onglets */
-.tabcontent {
-    display: none;
-    padding: 20px;
-}
-
 .formulaires {
     display: flex;
-    align-items: stretch;
     width: 400px; /* Ajuste la largeur du formulaire */
     max-width: 600px; /* Limite la largeur maximale */
     margin-top: 50px;
@@ -86,7 +73,6 @@ body {
 }
 
 .submit-button {
-    height: auto;
     background-color:#0065FC;
     color: #fff;
     border: none;
@@ -97,7 +83,7 @@ body {
 }
 
 .submit-button .fas.fa-search {
-    display: none;
+    display: none; /*n'apparait pas sur les grands écrans  */
 }
 
 .filtre {
@@ -191,13 +177,11 @@ a {
 
 .hebergements-cards {
     display:flex;
-    flex-wrap: wrap;
-	justify-content: space-around;
- 
+    flex-wrap: wrap; /* remet à la ligne les éléments qui dépasse  */
+    justify-content: space-around; /* Les éléments sont répartis équitablement À chaque extrémité, entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué  */
 }
 
 .hebergements-cards .card {
-
     height: 180px;
     width: 230px;
     margin-top: 30px;
@@ -213,9 +197,9 @@ a {
 .hebergements-cards .card-content {
     height: 40%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
+    flex-direction: column;/* Affiche les éléments en colonne */
+    justify-content: space-between; /*Espacement égal entre les éléments  */
+    box-sizing: border-box; /* Inclut les marges et les bordures dans la largeur */
 }
 
 .hebergements-cards .card-title {
@@ -347,7 +331,7 @@ footer {
 }
 
 /****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
+/* Styles pour les dispositifs de taille moyenne (tablettes, inférieurs ou égaux à 1024px) */
 @media(max-width: 1023.98px) {
     .hebergements-and-populaires {
         flex-direction: column;
@@ -398,12 +382,15 @@ footer {
         flex-direction: column;
     }   
 }
-
+/* Styles pour les dispositifs de taille moyenne (ordinateur, supérieurs ou égaux à 1024px et inférieurs ou égaux à 1439.98px) */
 @media (min-width: 1023.98px) and (max-width: 1439.98px) {
+
+    /* Ajustement de la largeur des cartes Hebergements */
     .hebergements-cards .card {
         width: 152px;
     }
 
+    /* Ajustement de la largeur des cartes Activites */
     .activites-cards .card {
         margin-left: 15px;
         width: 210px;
@@ -412,7 +399,10 @@ footer {
     
 }
 
+/* Styles pour les dispositifs de petite taille (smartphones, inférieurs ou égaux à 767.98px) */
 @media (max-width: 767.98px) {
+
+    /* Réorganisation de l'en-tête en colonne */
     .tt {
         flex-direction: column;
         margin:0;
@@ -464,20 +454,20 @@ footer {
         box-shadow: 1px 4px 4px 0px rgba(0, 0,0, .2);
     }
 
+    
     .submit-button .p{
-       display:none
-      
+       display:none /*L 'écriture "Rechercher" n'apparaît plus  */
     }
 
+    /* Styles pour l'icône de loupe dans le bouton */
     .submit-button .fas.fa-search {
-        display:flex;
-        
+        display:flex; /* on fait apparaître l'cone loupe */
     }
 
     
     .filter-row {
         flex-wrap: wrap; /* Afficher les filtres sur plusieurs lignes si nécessaire */
-        justify-content: left; /* Centrer les filtres horizontalement */
+        justify-content: left; /* Aligner les icônes onglet a gauche  */
         width:auto;
     }
 
