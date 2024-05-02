@@ -33,10 +33,10 @@ body {
 /* Style des onglets */
 
 .tab a.active-tab {
-    padding: 0;
-    color: #0065FC;
-    border-top: 2px solid #0065FC;
-    padding-top: 10.5px;
+    padding: 0; /* supprime les marge internes */
+    color: #0065FC; /* couleur d'hébergement */
+    border-top: 2px solid #0065FC; 
+    padding-top: 10.5px; /* hauteur de la barre */
     margin-right: 20px;
 }
 
