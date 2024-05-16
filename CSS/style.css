@@ -191,23 +191,28 @@ a {
     background-color: var(--main-bg-color);
 }
 
+.acard{
+    display:block;
+    width:31%;
+}
+
 .hebergements-cards {
     display:flex;
     flex-wrap: wrap; /* remet à la ligne les éléments qui dépasse  */
-    justify-content: space-around; /* Les éléments sont répartis équitablement À chaque extrémité, entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué  */
+    justify-content: space-between; /* Les éléments sont répartis équitablement À chaque extrémité, entre le bord du conteneur et le premier/dernier élément on a la moitié de l'espace appliqué  */
 }
 
 .hebergements-cards .card {
-    height: 180px;
-    width: 230px;
+    height: auto;
+    width: 100%;
     margin-top: 30px;
-    margin-left: 10px;
 }
 
 .hebergements-cards img {
     width: 100%;
     height: 100px;
     border-radius: 10px;
+
 }
 
 .hebergements-cards .card-content {
@@ -295,6 +300,9 @@ a {
 .activites {
     order: 3;
 }
+.bcard{
+    width: 30%;
+}
 
 .activites-title {
     margin-top: 20px;
@@ -309,7 +317,7 @@ a {
 
 .activites-cards .card {
     padding: 0px;
-    width: 100%;
+    width: 90%;
     height: 410px;
     margin-left: 35px;
     box-sizing: border-box; /* Pour inclure les marges dans le calcul de la largeur */    
@@ -353,9 +361,13 @@ footer {
     .hebergements-and-populaires {
         flex-direction: column;
     }
+    .acard{
+        display:block;
+        width:30%;
+    }
 
     .hebergements-cards .card {
-        width: 150px;
+        width: 100%;
     }
 
     .hebergements {
@@ -384,9 +396,12 @@ footer {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+    .bcard{
+        width:30%;
+    }
 
     .activites-cards .card {
-        width: 145px;
+        width: 95%;
         height: 240px;
         margin-left: 15px;
     }
@@ -399,22 +414,7 @@ footer {
         flex-direction: column;
     }   
 }
-/* Styles pour les dispositifs de taille moyenne (ordinateur, supérieurs ou égaux à 1024px et inférieurs ou égaux à 1439.98px) */
-@media (min-width: 1023.98px) and (max-width: 1439.98px) {
 
-    /* Ajustement de la largeur des cartes Hebergements */
-    .hebergements-cards .card {
-        width: 33%;
-    }
-
-    /* Ajustement de la largeur des cartes Activites */
-    .activites-cards .card {
-        margin-left: 15px;
-        width: 90%;
-        height: 410px;
-    }
-    
-}
 
 /* Styles pour les dispositifs de petite taille (smartphones, inférieurs ou égaux à 767.98px) */
 @media (max-width: 767.98px) {
@@ -542,6 +542,10 @@ footer {
         height: 100%;
         background-color: white;
     }
+    .acard{
+        width:100%;
+        
+    }
 
     .hebergements-title{
         margin-top: 20px;
@@ -554,7 +558,7 @@ footer {
 
     .hebergements-cards .card {
         width: 95%;
-        height: 100%;
+        height: 180px;
     }
 
     .populaires { 
@@ -569,8 +573,12 @@ footer {
         margin-top: 15px;
     }
 
+    .populaires-cards a {
+        width: 100%;
+    }
+
     .populaires-cards  {
-        width:330%;
+        width:100%;
         box-sizing: border-box;
         flex-direction: column;
     }
@@ -584,6 +592,10 @@ footer {
     .activites-cards {
         flex-direction: column;
         margin-top: 33px;
+    }
+
+    .bcard{
+        width:100%;
     }
 
     .activites-cards .card {
