@@ -131,6 +131,24 @@ body {
     font-weight: bold;
 }
 
+.aide{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.fa-info{
+    font-size: 12px;
+    height: 24px;
+    width: 24px;
+    border: 1px solid #F2F2F2;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .logement {
     display: flex;
 }
@@ -401,6 +419,10 @@ footer {
     }
     .activites-cards img {
         height: 170px;
+    }
+
+    .activites-cards .card-title {
+        font-size: 14px;
     }
 
     .filters-section {
