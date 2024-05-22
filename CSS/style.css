@@ -321,7 +321,7 @@ a {
     padding: 0px;
     width: 90%;
     height: 410px;
-    margin-left: 35px;
+    margin-left: 15px;
     box-sizing: border-box; /* Pour inclure les marges dans le calcul de la largeur */    
 }
 
